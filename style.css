@@ -7,6 +7,10 @@
   --transparent-white: hsla(0, 0%, 100%, 0.75);
   --very-light-gray: hsl(0, 0%, 95%);
 
+  --first-family: 'Big Shoulders Display', cursive;
+  --second-family: 'Lexend Deca', sans-serif;
+
+
   font-size: 62.5%;
 }
 
@@ -14,7 +18,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Big Shoulders Display', cursive;
 }
 
 a {
@@ -23,6 +26,7 @@ a {
 
 body {
   font-size: 1.5rem;
+  font-family: var(--second-family);
 }
 
 .container {
@@ -69,11 +73,11 @@ body {
 
 .card__title {
   color: var(--very-light-gray);
-
+  font-family: var(--first-family);
+  text-transform: uppercase;
   font-size: 4rem;
-  font-family: 'Lexend Deca', sans-serif;
   font-weight: 700;
-  padding-block: 40px;
+  padding-block: 24px;
 }
 
 .card__paragraph {
@@ -82,26 +86,29 @@ body {
   font-weight: 400;
 }
 
-.card--sedans .card__button {
-  color: var(--color);
-}
-
-.card--suvs .card__button {
-  color: var(--color);
-}
-
-.card--luxury .card__button {
-  color: var(--color);
-}
-
 .card__button {
+  font-family: var(--second-family);
   margin-top: 27px;
+  font-size: 1.4rem;
   background-color: var(--very-light-gray);
   border-radius: 40px;
   display: grid;
   place-items: center;
   padding: 15px 44px;
 }
+
+.card--sedans .card__button,
+.card--suvs .card__button,
+.card--luxury .card__button {
+  color: var(--color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+
+
 
 @media (min-width: 1024px) {
   .container {
@@ -121,6 +128,14 @@ body {
 
   .card:last-child {
     border-radius: 0 16px 16px 0;
+  }
+
+  .card__title {
+    font-size: 3.6rem;
+  }
+
+  .card__paragraph {
+    font-size: 1.4rem;
   }
 
   .card__button {
