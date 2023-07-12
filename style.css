@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+.container {
+  align-content: center;
+  min-height: 100vh;
+  background-color: var(--very-light-gray);
+  padding: 0 24px;
+  display: grid;
+  place-items: center;
+  grid-template-rows: repeat(3, auto);
+  padding-block: 40px;
+}
+
+.card {
+  max-width: 328px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card--sedans {
+  --color: var(--bright-orange);
+  background-color: var(--color);
+}
+
+.card--suvs {
+  --color: var(--dark-cyan);
+  background-color: var(--color);
+}
+
+.card--luxury {
+  --color: var(--very-dark-cyan);
+  background-color: var(--color);
+}
+
+.card:first-child {
+  border-radius: 16px 16px 0 0;
+}
+
+.card:last-child {
+  border-radius: 0 0 16px 16px;
+}
+
+.card__title {
+  color: var(--very-light-gray);
+
+  font-size: 4rem;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 700;
+  padding-block: 40px;
+}
+
+.card__paragraph {
+  color: var(--transparent-white);
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.card--sedans .card__button {
+  color: var(--color);
+}
+
+.card--suvs .card__button {
+  color: var(--color);
+}
+
+.card--luxury .card__button {
+  color: var(--color);
+}
+
+.card__button {
+  margin-top: 27px;
+  background-color: var(--very-light-gray);
+  border-radius: 40px;
+  display: grid;
+  place-items: center;
+  padding: 15px 44px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr;
+    justify-content: center;
+  }
+
+  .card {
+    width: 276px;
+    padding: 42px;
+  }
+
+  .card:first-child {
+    border-radius: 16px 0 0 16px;
+  }
+
+  .card:last-child {
+    border-radius: 0 16px 16px 0;
+  }
+
+  .card__button {
+    margin-top: 77px;
+  }
+}
+
+
+footer {
+  padding: 24px;
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
